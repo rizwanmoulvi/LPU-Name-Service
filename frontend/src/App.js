@@ -181,7 +181,7 @@ const App = () => {
         if (currentAccount && mints.length > 0) {
             return (
                 <div className="mint-container">
-                    <p className="subtitle"> Recently minted domains!</p>
+                    <p className="subtitle"> Recently minted IDs!</p>
                     <div className="mint-list">
                         {mints.map((mint, index) => {
                             return (
@@ -325,7 +325,7 @@ const App = () => {
                     <header>
                         <div className="left">
                             <p className="title">LPU NAME SERVICE</p>
-                            <p className="subtitle">Your Educational Web3 Domain</p>
+                            <p className="subtitle">Your Educational Web3 ID</p>
                         </div>
                         <div className="right">
                             <img alt="Network logo" className="logo" src={network.includes("Polygon") ? polygonLogo : ethLogo} />
