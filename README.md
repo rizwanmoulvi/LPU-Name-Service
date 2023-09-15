@@ -1,9 +1,9 @@
 # LPU Name Service
 
-Welcome to the LPU Name Service, a groundbreaking Web3 project designed to revolutionize the way universities interact with their students and enhance the learning experience. Imagine a world where every student has a unique Web3 domain as an NFT, a digital identity that can be used for a myriad of purposes, from receiving NFT documents to securely storing certificates, accessing exclusive content, and even using it for communication, just like those trusted .edu email addresses.
-Live Site: https://lpu-name-service-e85c18.spheron.app/
-Deployed Contract Address: 0x5D2FA90C3a7A799Db89400843F917236321E9e0a
-PolygonScan: https://mumbai.polygonscan.com/address/0x5D2FA90C3a7A799Db89400843F917236321E9e0a
+Welcome to the LPU Name Service, a groundbreaking Web3 project designed to revolutionize the way universities interact with their students and enhance the learning experience. Imagine a world where every student has a unique Web3 domain as an NFT, a digital identity that can be used for a myriad of purposes, from receiving NFT documents to securely storing certificates, accessing exclusive content, and even using it for communication, just like those trusted .edu email addresses.<br>
+Live Site:<br>https://lpu-name-service-e85c18.spheron.app/<br>
+Deployed Contract Address:<br>0x5D2FA90C3a7A799Db89400843F917236321E9e0a<br>
+PolygonScan:<br>https://mumbai.polygonscan.com/address/0x5D2FA90C3a7A799Db89400843F917236321E9e0a
 
 ## Table of Contents
 
