@@ -37,37 +37,37 @@ const App = () => {
         }
     };
 
-    const fetchMints = async () => {
-        try {
-            const { ethereum } = window;
+    // const fetchMints = async () => {
+    //     try {
+    //         const { ethereum } = window;
 
-            if (ethereum) {
-                const provider = new ethers.providers.Web3Provider(ethereum);
-                const signer = provider.getSigner();
-                const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+    //         if (ethereum) {
+    //             const provider = new ethers.providers.Web3Provider(ethereum);
+    //             const signer = provider.getSigner();
+    //             const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
 
-                const names = await contract.getAllNames();
+    //             const names = await contract.getAllNames();
 
-                const mintRecords = await Promise.all(
-                    names.map(async (name) => {
-                        const mintRecord = await contract.records(name);
-                        const owner = await contract.domains(name);
-                        return {
-                            id: names.indexOf(name),
-                            name: name,
-                            record: mintRecord,
-                            owner: owner,
-                        };
-                    })
-                );
+    //             const mintRecords = await Promise.all(
+    //                 names.map(async (name) => {
+    //                     const mintRecord = await contract.records(name);
+    //                     const owner = await contract.domains(name);
+    //                     return {
+    //                         id: names.indexOf(name),
+    //                         name: name,
+    //                         record: mintRecord,
+    //                         owner: owner,
+    //                     };
+    //                 })
+    //             );
 
-                console.log("MINTS FETCHED ", mintRecords);
-                setMints(mintRecords);
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    //             console.log("MINTS FETCHED ", mintRecords);
+    //             setMints(mintRecords);
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
 
     const updateDomain = async () => {
         if (!record || !domain) {
@@ -346,7 +346,7 @@ const App = () => {
                 {mints && renderMints()}
 
                 <div className="footer-container">
-                    <p>Built by Rizwan For Dappathon Season 2</p>
+                    <p>Student Name Service</p>
                 </div>
             </div>
         </div>
