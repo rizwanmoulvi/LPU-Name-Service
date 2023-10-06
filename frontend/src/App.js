@@ -8,7 +8,7 @@ import polygonLogo from "./assets/polygonlogo.png";
 import lpulogo from './assets/lpulogo.png'; 
 
 const tld = ".lpu";
-const CONTRACT_ADDRESS = "0x5D2FA90C3a7A799Db89400843F917236321E9e0a";
+const CONTRACT_ADDRESS = "0xD94881b95E7d053f8e2a344AEA616EA48a8088f9";
 
 const App = () => {
     const [mints, setMints] = useState([]);
@@ -37,37 +37,37 @@ const App = () => {
         }
     };
 
-    // const fetchMints = async () => {
-    //     try {
-    //         const { ethereum } = window;
+    const fetchMints = async () => {
+        try {
+            const { ethereum } = window;
 
-    //         if (ethereum) {
-    //             const provider = new ethers.providers.Web3Provider(ethereum);
-    //             const signer = provider.getSigner();
-    //             const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+            if (ethereum) {
+                const provider = new ethers.providers.Web3Provider(ethereum);
+                const signer = provider.getSigner();
+                const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
 
-    //             const names = await contract.getAllNames();
+                const names = await contract.getAllNames();
 
-    //             const mintRecords = await Promise.all(
-    //                 names.map(async (name) => {
-    //                     const mintRecord = await contract.records(name);
-    //                     const owner = await contract.domains(name);
-    //                     return {
-    //                         id: names.indexOf(name),
-    //                         name: name,
-    //                         record: mintRecord,
-    //                         owner: owner,
-    //                     };
-    //                 })
-    //             );
+                const mintRecords = await Promise.all(
+                    names.map(async (name) => {
+                        const mintRecord = await contract.records(name);
+                        const owner = await contract.domains(name);
+                        return {
+                            id: names.indexOf(name),
+                            name: name,
+                            record: mintRecord,
+                            owner: owner,
+                        };
+                    })
+                );
 
-    //             console.log("MINTS FETCHED ", mintRecords);
-    //             setMints(mintRecords);
-    //         }
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
+                console.log("MINTS FETCHED ", mintRecords);
+                setMints(mintRecords);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     const updateDomain = async () => {
         if (!record || !domain) {
