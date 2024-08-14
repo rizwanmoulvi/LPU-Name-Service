@@ -231,7 +231,7 @@ const App = () => {
             try {
                 await window.ethereum.request({
                     method: "wallet_switchEthereumChain",
-                    params: [{ chainId: "0xa02dc" }], 
+                    params: [{ chainId: "0xa01dc" }], 
                 });
             } catch (error) {
                 if (error.code === 4902) {
@@ -240,7 +240,7 @@ const App = () => {
                             method: "wallet_addEthereumChain",
                             params: [
                                 {
-                                    chainId: "0xa02dc",
+                                    chainId: "0xa01dc",
                                     chainName: "Edu-Chain",
                                     rpcUrls: ["https://rpc.open-campus-codex.gelato.digital"],
                                     nativeCurrency: {
