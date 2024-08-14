@@ -8,7 +8,7 @@ import polygonLogo from "./assets/polygonlogo.png";
 import lpulogo from './assets/lpulogo.png'; 
 
 const tld = ".lpu";
-const CONTRACT_ADDRESS = "0xd773be644ec4c5a9e0e2a85530902eb39ac28e79";
+const CONTRACT_ADDRESS = "0xd773bE644ec4C5a9e0E2A85530902eB39AC28E79";
 
 const App = () => {
     const [mints, setMints] = useState([]);
