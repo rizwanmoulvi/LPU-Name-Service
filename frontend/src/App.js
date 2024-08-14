@@ -231,7 +231,7 @@ const App = () => {
             try {
                 await window.ethereum.request({
                     method: "wallet_switchEthereumChain",
-                    params: [{ chainId: "0x13881" }], 
+                    params: [{ chainId: "0xa02dc" }], 
                 });
             } catch (error) {
                 if (error.code === 4902) {
@@ -240,15 +240,15 @@ const App = () => {
                             method: "wallet_addEthereumChain",
                             params: [
                                 {
-                                    chainId: "0x13881",
-                                    chainName: "Polygon Mumbai Testnet",
-                                    rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
+                                    chainId: "0xa02dc",
+                                    chainName: "Edu-Chain",
+                                    rpcUrls: ["https://rpc.open-campus-codex.gelato.digital"],
                                     nativeCurrency: {
-                                        name: "Mumbai Matic",
-                                        symbol: "MATIC",
+                                        name: "EDU",
+                                        symbol: "EDU",
                                         decimals: 18,
                                     },
-                                    blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
+                                    blockExplorerUrls: ["https://opencampus-codex.blockscout.com/"],
                                 },
                             ],
                         });
@@ -264,10 +264,10 @@ const App = () => {
     };
 
     const renderInputForm = () => {
-        if (network !== "Polygon Mumbai Testnet") {
+        if (network !== "Edu-Chain") {
             return (
                 <div className="connect-wallet-container">
-                    <p>Please connect to Polygon Mumbai Testnet</p>
+                    <p>Please connect to Edu-Chain</p>
                     <button className="cta-button mint-button" onClick={switchNetwork}>
                         Click here to switch
                     </button>
